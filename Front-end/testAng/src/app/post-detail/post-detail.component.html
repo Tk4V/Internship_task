@@ -1,0 +1,21 @@
+<div *ngIf="isLoading" class="is-loading">Loading post details...</div>
+<div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+<div *ngIf="post" class="post-detail">
+  <article>
+    <header class="post-header">
+      <h1 class="post-title">{{ post.title }}</h1>
+    </header>
+    <section class="post-content">
+      <markdown [data]="post.content"></markdown>
+    </section>
+    <footer class="post-footer">
+      <div class="post-tags">
+        <div class="tags-container">
+          <span *ngFor="let tag of post.tags" class="tag">{{ tag }}</span>
+        </div>
+      </div>
+    </footer>
+  </article>
+  <img [src]="generateRandomPhotoUrl(post.tags)" alt="Random Photo">
+</div>

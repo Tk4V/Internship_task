@@ -1,0 +1,85 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-detail {
+  width: 80%;
+  max-width: 800px;
+  padding: 20px;
+  background: linear-gradient(45deg, #00bfff, #1e90ff, #00ffff); /* Blue gradient background */
+  border-radius: 10px;
+  color: #fff; /* White text color */
+  animation: fade-in 0.5s ease-out;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Neon glow effect */
+  display: flex; /* Add display flex property */
+  flex-direction: column; /* Set flex direction to column */
+  justify-content: center; /* Center align items vertically */
+}
+
+.post-header {
+  margin-bottom: 20px;
+}
+
+.post-title {
+  margin: 0;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #fff; /* White title color */
+}
+
+.post-content {
+  line-height: 1.6;
+  font-size: 1.2em;
+}
+
+.post-content markdown {
+  display: block;
+}
+
+.post-footer {
+  margin-top: 20px;
+}
+
+.post-tags {
+  margin: 0;
+}
+
+.post-tags small {
+  color: #aaa; /* Lighter color for tags */
+}
+
+.tag {
+  display: inline-block;
+  margin: 5px 5px 0 0;
+  padding: 5px 10px;
+  background-color: #333; /* Darker tag background */
+  border-radius: 15px;
+  font-size: 0.9em;
+  color: #fff; /* White text color */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.tag:hover {
+  background-color: #ff6f61; /* Neon hover effect */
+  color: #fff; /* White text color */
+  transform: scale(1.05);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

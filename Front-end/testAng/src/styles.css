@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.post-tail {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.author-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.author-details {
+    flex: 1;
+}
+
+.author-name {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.author-bio {
+    margin: 5px 0 0 0;
+    color: #555;
+}
+
+.post-meta {
+    margin-bottom: 20px;
+}
+
+.post-date {
+    margin: 0 0 5px 0;
+    color: #888;
+}
+
+.post-tags {
+    margin: 0;
+}
+
+.post-tags .tag {
+    text-decoration: none;
+    color: #3498db;
+    margin-right: 5px;
+}
+
+.post-tags .tag:hover {
+    text-decoration: underline;
+}
+
+.social-share {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.social-share p {
+    margin: 0 0 10px 0;
+    color: #888;
+}
+
+.social-link {
+    text-decoration: none;
+    color: #3498db;
+    margin: 0 10px;
+}
+
+.social-link:hover {
+    text-decoration: underline;
+}
+/* You can add global styles to this file, and also import other style files */

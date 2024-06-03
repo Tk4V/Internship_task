@@ -1,0 +1,22 @@
+<div class="container">
+  <div *ngIf="isLoading" class="is-loading">Loading posts...</div>
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+  <input type="text" (input)="searchPosts($event)" placeholder="Search posts...">
+
+  <div *ngIf="getUniqueTags().length">
+    <button *ngFor="let tag of getUniqueTags()" (click)="filterPosts(tag)" class="tag-button">
+      {{ tag }}
+    </button>
+    <button (click)="clearFilter()" class="clear-filter-button">Clear Filter</button>
+  </div>
+
+  <div *ngFor="let post of filteredPosts" (click)="selectPost(post)" class="post-item" [class.selected]="post === selectedPost">
+    <h3>{{ post.title }}</h3>
+    <markdown [data]="post.summary"></markdown>
+    <small>Tags: {{ post.tags.join(', ') }}</small>
+    
+    <!-- Random photo rendering from Unsplash -->
+    <img [src]="generateRandomPhotoUrl(post.tags)" alt="Random Photo">
+  </div>
+</div>
